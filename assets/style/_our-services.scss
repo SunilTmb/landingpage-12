@@ -115,6 +115,9 @@
       color: $third-tcolor;
     }
   }
+  .service_card_wraper {
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 991px) {
   .client_wraper {
@@ -122,11 +125,11 @@
       width: 250px;
     }
   }
+  .service_card_wraper {
+    gap: 15px;
+  }
   .sevice_main_heading {
     margin: 20px 0 60px;
-  }
-  .service_card_wraper {
-    justify-content: center;
   }
 }
 
@@ -179,8 +182,7 @@
     gap: 15px;
     justify-content: center;
   }
-  .service_card 
-  {
+  .service_card {
     &.card-4 {
       a {
         font-size: 22px;

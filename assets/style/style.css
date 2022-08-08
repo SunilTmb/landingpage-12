@@ -1,5 +1,4 @@
-/*======= common =======*/
-/*======= Background Color =======*/
+/*======= common =======*/ /*======= Background Color =======*/
 /*======= Text Color =======*/
 /*======= Common Class =======*/
 * {
@@ -64,6 +63,10 @@ li {
   padding: 120px 0;
 }
 
+.pd-10 {
+  padding: 120px 0 100px;
+}
+
 .heading-2 {
   font-weight: 700;
   font-size: 72px;
@@ -72,7 +75,7 @@ li {
 }
 
 .heading-4 {
-  font-weight: 800;
+  font-weight: 700;
   font-size: 36px;
   line-height: 38px;
 }
@@ -511,7 +514,7 @@ li {
     flex-direction: column;
     max-width: 400px;
     width: 100%;
-    margin: 30px auto;
+    margin: 35px auto;
   }
   .banner_container h1 {
     font-size: 38px;
@@ -620,16 +623,19 @@ li {
     line-height: 36px;
     color: #88898a;
   }
+  .service_card_wraper {
+    justify-content: center;
+  }
 }
 @media only screen and (max-width: 991px) {
   .client_wraper img {
     width: 250px;
   }
+  .service_card_wraper {
+    gap: 15px;
+  }
   .sevice_main_heading {
     margin: 20px 0 60px;
-  }
-  .service_card_wraper {
-    justify-content: center;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -831,6 +837,7 @@ li {
   }
   .feature_main_heading {
     text-align: center;
+    margin: 20px auto 35px;
   }
   .feature_left {
     display: flex;
@@ -892,8 +899,9 @@ li {
 .work_wrappers {
   display: flex;
   gap: 30px;
-  justify-content: space-between;
+  justify-content: center;
   flex-wrap: wrap;
+  margin-top: 80px;
 }
 
 .work_wrapper {
@@ -913,7 +921,7 @@ li {
   border-radius: inherit;
   z-index: -1;
   transform: translate(-50%, -50%);
-  Opacity: 20%;
+  opacity: 20%;
   transition: 0.5s;
 }
 .work_wrapper:hover:after {
@@ -924,6 +932,7 @@ li {
   display: block;
   position: relative;
   z-index: -2;
+  max-width: 100%;
 }
 .work_wrapper .p {
   position: absolute;
@@ -934,12 +943,12 @@ li {
   padding: 20px 30px 20px 30px;
   border-radius: 25px;
   backdrop-filter: blur(10px);
-  width: 100%;
+  width: calc(100% - 60px);
 }
 .work_wrapper p {
   font-size: 36px;
   line-height: 38px;
-  font-weight: 800;
+  font-weight: 700;
   color: #fff;
 }
 
@@ -951,7 +960,224 @@ li {
   text-align: center;
 }
 
+/*======= RESPONSIVE START =======*/
+/*======= Our Work Section Responsive start =======*/
+/*==== Responsive at 1024 ====*/
+@media only screen and (max-width: 1024px) {
+  .work_wrappers {
+    justify-content: center;
+  }
+}
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .work_wrappers {
+    margin-top: 45px;
+  }
+  .work_wrapper p {
+    font-size: 30px;
+    line-height: 30px;
+  }
+}
+/*==== Responsive at 575 ====*/
+@media only screen and (max-width: 575px) {
+  .work_wrappers {
+    margin-top: 35px;
+  }
+  .work_wrapper .p {
+    padding: 10px;
+  }
+  .work_wrapper p {
+    font-size: 20px;
+    line-height: 20px;
+  }
+}
 /*======= Our Our Section css End =======*/
+/*=======******************************======*/
+/*======= Grow Business Section =======*/
+/*======= Grow Business Section css start =======*/
+.grow_business {
+  background: linear-gradient(rgb(161, 119, 218), rgb(97, 85, 226));
+}
+
+/*+++=Business Left side =+++*/
+.business_box {
+  gap: 30px;
+}
+
+.business_left_cards {
+  width: 50%;
+  max-width: 100%;
+}
+.business_left_cards .cards {
+  gap: 30px;
+}
+.business_left_cards .cards:not(:last-child) {
+  margin-bottom: 30px;
+}
+
+.business_card {
+  background-color: #fff;
+  padding: 20px 30px;
+  border: 2px solid rgba(255, 128, 135, 0.14);
+  border-radius: 30px;
+  max-width: 375px;
+  width: 100%;
+}
+.business_card .heading-4 {
+  margin: 40px 0 20px;
+}
+.business_card p {
+  font-size: 22px;
+  line-height: 28px;
+  color: #88898a;
+}
+
+.business_card_icon {
+  padding: 30px;
+  position: relative;
+  background-image: linear-gradient();
+  background-color: rgba(57, 28, 221, 0.1);
+  border-radius: 30px;
+  display: inline-block;
+  text-align: center;
+}
+
+/*+++=Business Right side =+++*/
+.business_right_side {
+  display: flex;
+  flex-direction: column;
+  max-width: 665px;
+  width: 100%;
+}
+.business_right_side .heading {
+  font-size: 25px;
+  font-weight: 700;
+  line-height: 36px;
+  color: #fff;
+}
+.business_right_side .heading-2 {
+  color: #fff;
+  margin: 20px auto 30px;
+}
+.business_right_side .featuer_contents {
+  margin-bottom: 60px;
+}
+.business_right_side .featuer_contents p {
+  color: #fff;
+}
+.business_right_side .feature_btn {
+  color: rgb(161, 119, 218) !important;
+  background: #fff !important;
+}
+.business_right_side .business-btn {
+  margin: auto 0 0;
+}
+
+/*======= RESPONSIVE START =======*/
+/*======= Our Feature Section Responsive start =======*/
+/*==== Responsive at 1200 ====*/
+@media only screen and (max-width: 1200px) {
+  /*+++=Business Right side =+++*/
+  .business_right_side {
+    max-width: 50%;
+  }
+}
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .business_box {
+    flex-direction: column;
+    align-items: center;
+  }
+  /*+++=Business Left side =+++*/
+  .business_left_cards {
+    width: 100%;
+    max-width: 100%;
+  }
+  .business_left_cards .cards {
+    justify-content: center;
+  }
+  .business_card_icon {
+    padding: 20px;
+    border-radius: 15px;
+  }
+  /*+++=Business Right side =+++*/
+  .business_right_side {
+    max-width: 100%;
+  }
+  .business_right_side .heading {
+    text-align: center;
+  }
+  .business_right_side .heading-2 {
+    text-align: center;
+  }
+  .business_right_side .featuer_contents {
+    text-align: center;
+  }
+  .business_right_side .feature_btn {
+    max-width: 350px;
+    display: block;
+    margin: 0 auto;
+    text-align: center;
+  }
+}
+/*==== Responsive at 768 ====*/
+@media only screen and (max-width: 768px) {
+  .business_card_icon {
+    padding: 20px;
+    border-radius: 20px;
+  }
+  .business_card .heading-4 {
+    margin: 20px 0 10px;
+  }
+  /*+++=Business Right side =+++*/
+  .business_right_side .heading-2 {
+    text-align: center;
+    margin: 20px auto 35px;
+  }
+  .business_right_side .featuer_contents {
+    margin-bottom: 40px;
+  }
+}
+/*==== Responsive at 575 ====*/
+@media only screen and (max-width: 575px) {
+  .business_card_icon {
+    padding: 10px;
+    border-radius: 10px;
+  }
+  .business_card {
+    padding: 15px;
+  }
+  .business_card .heading-4 {
+    margin: 10px 0 5px;
+  }
+  .business_card p {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/*==== Responsive at 575 ====*/
+@media only screen and (max-width: 480px) {
+  /*+++=Business Left side =+++*/
+  .business_left_cards .cards {
+    gap: 20px;
+    justify-content: center;
+    flex-direction: column;
+    align-items: center;
+  }
+  .business_left_cards .cards:not(:last-child) {
+    margin-bottom: 20px;
+  }
+}
+/*======= Our Feature Section css End =======*/
+/*=======******************************======*/
+/*======= Client Review Section =======*/
+/*======= Client Review Section css start =======*/
+/*======= Our Experts Part =======*/
+/*======= Review About Us Part=======*/
+/*======= RESPONSIVE START =======*/
+/*======= Client Review Section Responsive start =======*/
+/*==== Responsive at 1024 ====*/
+/*======= Client Review Section css End =======*/
 /*=======******************************======*/
 /*======= Footer =======*/
 .footer {
