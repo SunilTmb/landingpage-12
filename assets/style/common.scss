@@ -1,0 +1,119 @@
+/*======= Background Color =======*/
+$primary-bgcolor: #fff;
+$primary-bgcolor: #fff;
+$primary-bgcolor: #fff;
+
+/*======= Text Color =======*/
+$primary-tcolor: #fff; //initial text color is white
+$second-tcolor: #000; //initial text color is white
+$third-tcolor: #88898a; //initial text color is kind of Grey
+$fourth-tcolor: #f7d353; //initial text color is kind of Gold
+
+/*======= Common Class =======*/
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+  font-family: "Harmattan", "sans-sarif";
+}
+
+.container {
+  max-width: 1630px;
+  width: 100%;
+  padding: 0 20px;
+  margin: 0 auto;
+}
+
+a {
+  text-decoration: none;
+}
+
+li {
+  list-style: none;
+}
+
+.tx-white {
+  color: $primary-tcolor;
+}
+.tx-black {
+  color: $second-tcolor;
+}
+.tx-grey {
+  color: $third-tcolor;
+}
+.dblock {
+  display: block;
+}
+.dflex {
+  display: flex;
+}
+.lh-0 {
+  line-height: 0;
+}
+.common_heading {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+  background: linear-gradient(270deg, #a177da -8.4%, #6155e2 107.56%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  display: flex;
+  gap: 20px;
+  align-items: center;
+}
+
+.pd-12 {
+  padding: 120px 0;
+}
+.heading-2{
+    font-weight: 700;
+    font-size: 72px;
+    line-height: 86px;
+    color: $second-tcolor;
+}
+.heading-4{
+    font-weight: 800;
+    font-size: 36px;
+    line-height: 38px;
+}
+
+
+
+@media only screen and (max-width: 991px) {
+  .pd-6 {
+    padding: 60px 0;
+  }
+  .heading-2{
+    font-size: 45px;
+    line-height: 55px;
+}
+.heading-4{
+    font-size: 30px;
+    line-height: 30px;
+}
+
+  
+}
+
+@media only screen and (max-width: 768px) {
+  .common_heading {
+    font-weight: 22px;
+    line-height: 28px;
+    gap: 10px;
+    justify-content: center;
+  }
+    .heading-2{
+        font-size: 35px;
+        line-height: 45px;
+    }
+    .heading-4{
+        font-size: 25px;
+        line-height: 25px;
+    }
+}
+
+@media only screen and (max-width: 575px){
+  .pd-6{
+    padding:30px 0;
+}
+}
