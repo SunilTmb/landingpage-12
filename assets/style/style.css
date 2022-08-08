@@ -1172,11 +1172,57 @@ li {
 /*=======******************************======*/
 /*======= Client Review Section =======*/
 /*======= Client Review Section css start =======*/
+.client_reviews .l_line {
+  display: none;
+}
+
+.review_heading {
+  margin: 20px auto 80px;
+}
+
 /*======= Our Experts Part =======*/
+/*======= Our Expert Swiper =======*/
+.swiper {
+  width: 100%;
+  height: 100%;
+}
+
+.swiper-slide {
+  text-align: center;
+  font-size: 18px;
+  background: #fff;
+  /* Center slide text vertically */
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: -webkit-flex;
+  display: flex;
+  -webkit-box-pack: center;
+  -ms-flex-pack: center;
+  -webkit-justify-content: center;
+  justify-content: center;
+  -webkit-box-align: center;
+  -ms-flex-align: center;
+  -webkit-align-items: center;
+  align-items: center;
+}
+
+.swiper-slide img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
 /*======= Review About Us Part=======*/
 /*======= RESPONSIVE START =======*/
 /*======= Client Review Section Responsive start =======*/
-/*==== Responsive at 1024 ====*/
+/*==== Responsive at 1200 ====*/
+/*==== Responsive at 768 ====*/
+@media only screen and (max-width: 768px) {
+  .client_reviews .l_line {
+    display: block;
+  }
+}
 /*======= Client Review Section css End =======*/
 /*=======******************************======*/
 /*======= Footer =======*/

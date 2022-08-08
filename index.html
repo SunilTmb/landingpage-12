@@ -6,8 +6,15 @@
   <meta http-equiv="X-UA-Compatible" content="IE=edge" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
   <title>Landingpage-12</title>
+
+  <!-- font stylesheet -->
   <link href="assets/font/stylesheet.css" rel="stylesheet" />
+
+  <!-- Local css stylesheet -->
   <link href="assets/style/style.css" rel="stylesheet" />
+
+  <!-- JS stylesheet for swiper-bundle -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.css" />
 </head>
 
 <body>
@@ -324,15 +331,91 @@
   <!--========================================-->
 
   <!--===== Client Review Section Start =====-->
-  <section>
+  <section class="client_reviews">
     <!--===== Our Expert Part =====-->
-    <div class="Our Expert">
+    <div class="Our_Expert">
+      <div class="container">
+        <div class="client_review_header">
+          <p class="common_heading">
+            <span class="line l_line"></span>Clints Reviews
+            <span class="line r_line"></span>
+          </p>
+          <h2 class="heading-2 review_heading">
+            Our Experts
+          </h2>
+        </div>
 
+        <!-- Our Expert Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper expert_swiper_wrapper">
+            <div class="swiper-slide expert_slide">
+              <img src="assets/img/ceo-1.jpg" alt="image">
+              <div>
+                <p>COO</p>
+                <p>Jaylon Calzoni</p>
+              </div>
+            </div>
+            <div class="swiper-slide expert_slide">
+              <img src="assets/img/ceo-1.jpg" alt="image">
+              <div>
+                <p>CEO</p>
+                <p>Charlie Kenter</p>
+              </div>
+            </div>
+            <div class="swiper-slide expert_slide">
+              <img src="assets/img/ceo-1.jpg" alt="image">
+              <div>
+                <p>SEO</p>
+                <p>Kaylynn Philips</p>
+              </div>
+            </div>
+            <div class="swiper-slide expert_slide">
+              <img src="assets/img/ceo-1.jpg" alt="image">
+              <div>
+                <p>DESIGNER</p>
+                <p>Ahmad Franci</p>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <!-- <div class="swiper-pagination"></div> -->
+        </div>
+      </div>
     </div>
 
     <!--===== Review About Us Part =====-->
-    <div>
 
+    <div class="review_about_us">
+      <div class="container">
+        <div class="client_review_header">
+          <p class="common_heading">
+            <span class="line l_line"></span>Clints Reviews
+            <span class="line r_line"></span>
+          </p>
+          <h2 class="heading-2 review_heading">
+            Client’s Says About Us
+          </h2>
+        </div>
+
+        <!-- Our Review About Us Swiper -->
+        <div class="swiper mySwiper">
+          <div class="swiper-wrapper">
+            <div class="swiper-slide">Slide 1</div>
+            <div class="swiper-slide">Slide 2</div>
+            <div class="swiper-slide">Slide 3</div>
+            <div class="swiper-slide">Slide 4</div>
+            <div class="swiper-slide">Slide 5</div>
+            <div class="swiper-slide">Slide 6</div>
+            <div class="swiper-slide">Slide 7</div>
+            <div class="swiper-slide">Slide 8</div>
+            <div class="swiper-slide">Slide 9</div>
+          </div>
+          <div class="swiper-button-next"></div>
+          <div class="swiper-button-prev"></div>
+          <div class="swiper-pagination"></div>
+        </div>
+      </div>
     </div>
 
   </section>
@@ -377,6 +460,8 @@
       </div>
     </div>
   </footer>
+  <!-- Swiper JS -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper/swiper-bundle.min.js"></script>
 
   <script>
     let navList = document.querySelector(".nav_list");
@@ -397,8 +482,22 @@
       }
     });
 
-    // Background Gradiant Color Js Code
-    let Card = document.querySelectorAll(".service_card");
+    // <!-- Initialize Swiper -->
+    var swiper = new Swiper(".mySwiper", {
+      slidesPerView: 3,
+      spaceBetween: 30,
+      slidesPerGroup: 4,
+      loop: true,
+      loopFillGroupWithBlank: true,
+      pagination: {
+        el: ".swiper-pagination",
+        clickable: true,
+      },
+      navigation: {
+        nextEl: ".swiper-button-next",
+        prevEl: ".swiper-button-prev",
+      },
+    });
   </script>
 </body>
 
