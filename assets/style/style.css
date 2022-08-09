@@ -59,6 +59,10 @@ li {
   align-items: center;
 }
 
+.l_line_hide {
+  display: none;
+}
+
 .pd-12 {
   padding: 120px 0;
 }
@@ -81,7 +85,7 @@ li {
 }
 
 @media only screen and (max-width: 991px) {
-  .pd-6 {
+  .pd-12 {
     padding: 60px 0;
   }
   .heading-2 {
@@ -91,6 +95,9 @@ li {
   .heading-4 {
     font-size: 30px;
     line-height: 30px;
+  }
+  .common_heading {
+    justify-content: center;
   }
 }
 @media only screen and (max-width: 768px) {
@@ -110,7 +117,7 @@ li {
   }
 }
 @media only screen and (max-width: 575px) {
-  .pd-6 {
+  .pd-12 {
     padding: 30px 0;
   }
 }
@@ -599,6 +606,10 @@ li {
   line-height: 36px;
   background-color: #fff;
   border-radius: 30px;
+  transition: 0.5s;
+}
+.service_card.card-4 a:hover {
+  transform: scale(1.1);
 }
 
 /*======= RESPONSIVE START =======*/
@@ -628,6 +639,9 @@ li {
   }
 }
 @media only screen and (max-width: 991px) {
+  .our_service .l_line {
+    display: block;
+  }
   .client_wraper img {
     width: 250px;
   }
@@ -636,18 +650,15 @@ li {
   }
   .sevice_main_heading {
     margin: 20px 0 60px;
+    text-align: center;
   }
 }
 @media only screen and (max-width: 768px) {
-  .our_service .l_line {
-    display: block;
-  }
   .client_wraper img {
     width: 200px;
   }
   .sevice_main_heading {
     margin: 20px 0 35px;
-    text-align: center;
   }
   .service_card {
     padding: 30px 30px 50px;
@@ -694,6 +705,10 @@ li {
   display: none;
 }
 
+.desktop_feature {
+  display: none;
+}
+
 .feature_wraper {
   gap: 20px;
   justify-content: space-between;
@@ -733,7 +748,7 @@ li {
   transition: all 0.5s;
 }
 .feature_btn:hover {
-  opacity: 0.8;
+  transform: scale(1.1);
 }
 
 .feature_right {
@@ -804,6 +819,22 @@ li {
 /*==== Responsive at 1200 ====*/
 /*==== Responsive at 991 ====*/
 @media only screen and (max-width: 991px) {
+  .our_feature .l_line {
+    display: block;
+  }
+  .mobile_feature {
+    display: none;
+  }
+  .desktop_feature {
+    display: block;
+    display: flex;
+    margin-bottom: 40px;
+  }
+  .feature_wraper {
+    gap: 20px;
+    align-items: center;
+    flex-direction: column-reverse;
+  }
   .featuer_contents {
     margin-bottom: 50px;
   }
@@ -825,12 +856,14 @@ li {
     line-height: 28px;
     margin: 10px auto 10px;
   }
+  .feature_left {
+    text-align: center;
+  }
 }
 /*==== Responsive at 768 ====*/
 @media only screen and (max-width: 768px) {
   .feature_wraper {
-    flex-direction: column;
-    gap: 30px;
+    gap: 15px;
   }
   .feature_left .l_line {
     display: block;
@@ -1172,6 +1205,9 @@ li {
 /*=======******************************======*/
 /*======= Client Review Section =======*/
 /*======= Client Review Section css start =======*/
+.client_reviews {
+  background: linear-gradient(rgba(255, 128, 135, 0.05), rgba(59, 209, 191, 0.05), rgba(57, 28, 221, 0.05));
+}
 .client_reviews .l_line {
   display: none;
 }
@@ -1180,7 +1216,37 @@ li {
   margin: 20px auto 80px;
 }
 
-/*======= Our Experts Part =======*/
+.our_expert-container {
+  position: relative;
+}
+.our_expert-container .swiper-button-next,
+.our_expert-container .swiper-button-prev {
+  padding: 21px;
+  border: 2px solid #f7d353;
+  color: rgb(136, 137, 138);
+  border-radius: 10px;
+  position: relative !important;
+  top: initial;
+  left: initial;
+}
+.our_expert-container .swiper-button-next:after,
+.our_expert-container .swiper-rtl .swiper-button-prev:after,
+.our_expert-container .swiper-button-prev:after,
+.our_expert-container .swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.our_expert-container .swiper_btn {
+  gap: 30px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  flex-direction: row-reverse;
+}
+
 /*======= Our Expert Swiper =======*/
 .swiper {
   width: 100%;
@@ -1213,10 +1279,81 @@ li {
   object-fit: cover;
 }
 
+.experts {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+
+.swiper-button-next:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.swiper-button-next::after {
+  content: "next";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.experts_post {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: #f7d353;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: fit-content;
+  backdrop-filter: blur(15px);
+}
+
+.name_experts {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  color: #fff;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+}
+
 /*======= Review About Us Part=======*/
+.Our_expert .swiper,
+.Our_expert .swiper-wrapper {
+  position: initial !important;
+}
+
 /*======= RESPONSIVE START =======*/
 /*======= Client Review Section Responsive start =======*/
-/*==== Responsive at 1200 ====*/
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .client_reviews .l_line {
+    display: block;
+  }
+  .review_about_us {
+    padding-top: 80px;
+  }
+  .name_experts {
+    font-size: 25px;
+    line-height: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .experts_post {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
+}
 /*==== Responsive at 768 ====*/
 @media only screen and (max-width: 768px) {
   .client_reviews .l_line {
@@ -1224,6 +1361,151 @@ li {
   }
 }
 /*======= Client Review Section css End =======*/
+/*=======******************************======*/
+/*======= Our Blog Section =======*/
+/*======= Our Blog Section css start =======*/
+.our_blog .l_line {
+  display: none;
+}
+
+.blog_cards {
+  max-width: 100%;
+  width: 100%;
+  gap: 30px;
+}
+
+.card {
+  border-radius: 30px;
+  padding: 2px;
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  background: linear-gradient(rgba(255, 128, 135, 0.14), rgba(59, 209, 191, 0.14), rgba(57, 28, 221, 0.14));
+}
+.card div {
+  background: #fff;
+  border-radius: 28px;
+}
+.card:hover .icon_set {
+  background: rgb(97, 85, 226);
+}
+
+.icon_set {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  transition: 0.5s;
+}
+
+path {
+  transition: 0.5s;
+}
+
+.heart {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+}
+.heart:hover path {
+  background-color: rgb(97, 85, 226);
+  fill: rgb(104, 96, 194);
+}
+
+.heart2 {
+  width: 16px;
+  height: 20px;
+  margin: 5px 7px;
+  transition: 0.5s;
+}
+.heart2:hover path {
+  background: rgb(97, 85, 226);
+  fill: rgb(104, 96, 194);
+}
+
+.blog_card_img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+}
+
+.card_content {
+  padding: 20px;
+  border-radius: 30px;
+}
+
+.card_heading {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+}
+
+.card_para {
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  color: rgb(136, 137, 138);
+  margin-top: 10px;
+}
+
+/*======= RESPONSIVE START =======*/
+/*======= Our Blog Section Responsive start =======*/
+/*==== Responsive at 1200 ====*/
+@media only screen and (max-width: 1200px) {
+  .icon_set {
+    top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .blog_cards {
+    gap: 15px;
+  }
+  .our_blog .l_line {
+    display: block;
+  }
+  .card_heading {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .card_para {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+/*==== Responsive at 768 ====*/
+@media only screen and (max-width: 768px) {
+  .blog_cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    max-width: 250px;
+  }
+  .card_heading {
+    font-size: 20px;
+    line-height: 16px;
+  }
+  .icon_set {
+    top: 10px;
+  }
+}
+/*==== Responsive at 480px ====*/
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+/*======= Our Blog Section css End =======*/
 /*=======******************************======*/
 /*======= Footer =======*/
 .footer {

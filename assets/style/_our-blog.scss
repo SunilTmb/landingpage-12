@@ -1,0 +1,150 @@
+/*======= Our Blog Section css start =======*/
+.our_blog {
+  .l_line {
+    display: none;
+  }
+}
+.blog_cards {
+  max-width: 100%;
+  width: 100%;
+  gap: 30px;
+}
+
+.card {
+  border-radius: 30px;
+  //   border: 2px solid transparent;
+  padding: 2px;
+  position: relative;
+  max-width: 375px;
+  width: 100%;
+  background: linear-gradient(
+    rgba(255, 128, 135, 0.14),
+    rgba(59, 209, 191, 0.14),
+    rgba(57, 28, 221, 0.14)
+  );
+  div {
+    background: $primary-bgcolor;
+    border-radius: 28px;
+  }
+  &:hover .icon_set {
+    background: rgba(97, 85, 226, 1);
+  }
+}
+.icon_set {
+  position: absolute;
+  top: 40px;
+  right: 20px;
+  gap: 10px;
+  background-color: rgba(0, 0, 0, 0.1);
+  backdrop-filter: blur(20px);
+  padding: 10px;
+  border-radius: 10px;
+  align-items: center;
+  //   max-width: 101px;
+  transition: 0.5s;
+}
+path {
+  transition: 0.5s;
+}
+.heart {
+  width: 30px;
+  height: 30px;
+  transition: 0.5s;
+  &:hover path {
+    background-color: rgba(97, 85, 226, 1);
+    fill: rgb(104, 96, 194);
+  }
+}
+.heart2 {
+  width: 16px;
+  height: 20px;
+  margin: 5px 7px;
+  transition: 0.5s;
+  &:hover path {
+    background: rgba(97, 85, 226, 1);
+    fill: rgb(104, 96, 194);
+  }
+}
+.blog_card_img {
+  max-width: 100%;
+  width: 100%;
+  display: block;
+  border-radius: 30px;
+}
+.card_content {
+  padding: 20px;
+  border-radius: 30px;
+}
+.card_heading {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+}
+.card_para {
+  font-size: 22px;
+  line-height: 28px;
+  text-align: left;
+  color: rgba(136, 137, 138, 1);
+  margin-top: 10px;
+}
+/*======= RESPONSIVE START =======*/
+/*======= Our Blog Section Responsive start =======*/
+
+/*==== Responsive at 1200 ====*/
+@media only screen and (max-width: 1200px) {
+  .icon_set {
+    top: 15px;
+    padding: 5px;
+    border-radius: 5px;
+  }
+}
+
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .blog_cards {
+    gap: 15px;
+  }
+  .our_blog {
+    .l_line {
+      display: block;
+    }
+  }
+  .card_heading {
+    font-size: 25px;
+    line-height: 25px;
+  }
+  .card_para {
+    font-size: 18px;
+    line-height: 22px;
+  }
+}
+
+/*==== Responsive at 768 ====*/
+@media only screen and (max-width: 768px) {
+  .blog_cards {
+    flex-wrap: wrap;
+    justify-content: center;
+  }
+  .card {
+    max-width: 250px;
+  }
+  .card_heading {
+    font-size: 20px;
+    line-height: 16px;
+  }
+
+  .icon_set {
+    top: 10px;
+  }
+}
+
+/*==== Responsive at 480px ====*/
+@media only screen and (max-width: 480px) {
+  .card {
+    width: 100%;
+    max-width: 100%;
+  }
+}
+
+/*======= Our Blog Section css End =======*/
+/*=======******************************======*/

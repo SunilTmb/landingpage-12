@@ -1,6 +1,12 @@
 /*======= Client Review Section css start =======*/
 
 .client_reviews {
+  background: linear-gradient(
+    rgba(255, 128, 135, 0.05),
+    rgba(59, 209, 191, 0.05),
+    rgba(57, 28, 221, 0.05)
+  );
+
   .l_line {
     display: none;
   }
@@ -8,7 +14,37 @@
 .review_heading {
   margin: 20px auto 80px;
 }
-/*======= Our Experts Part =======*/
+.our_expert-container {
+  position: relative;
+
+  .swiper-button-next,
+  .swiper-button-prev {
+    padding: 21px;
+    border: 2px solid $fourth-tcolor;
+    color: rgba(136, 137, 138, 1);
+    border-radius: 10px;
+    position: relative !important;
+    top: initial;
+    left: initial;
+  }
+  .swiper-button-next:after,
+  .swiper-rtl .swiper-button-prev:after,
+  .swiper-button-prev:after,
+  .swiper-rtl .swiper-button-next:after {
+    font-size: 20px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 100%;
+  }
+  .swiper_btn {
+    gap: 30px;
+    position: absolute;
+    top: 45px;
+    right: 0;
+    flex-direction: row-reverse;
+  }
+}
 
 /*======= Our Expert Swiper =======*/
 
@@ -44,13 +80,83 @@
   object-fit: cover;
 }
 
+.experts {
+  position: absolute;
+  bottom: 40px;
+  left: 30px;
+  display: flex;
+  flex-direction: column;
+}
+.swiper-button-next:after {
+  position: absolute;
+  top: 0;
+  right: 0;
+}
+
+.swiper-button-next::after {
+  content: "next";
+  position: absolute;
+  top: 0;
+  left: 0;
+}
+
+.experts_post {
+  font-weight: 700;
+  font-size: 22px;
+  line-height: 28px;
+  color: $fourth-tcolor;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 5px 10px;
+  border-radius: 10px;
+  margin-bottom: 15px;
+  width: fit-content;
+  backdrop-filter: blur(15px);
+}
+.name_experts {
+  font-weight: 700;
+  font-size: 36px;
+  line-height: 38px;
+  color: $primary-tcolor;
+  background-color: rgba(255, 255, 255, 0.3);
+  padding: 15px 20px;
+  border-radius: 20px;
+  backdrop-filter: blur(30px);
+}
 /*======= Review About Us Part=======*/
+
+.Our_expert {
+  .swiper,
+  .swiper-wrapper {
+    position: initial !important;
+  }
+}
 
 /*======= RESPONSIVE START =======*/
 /*======= Client Review Section Responsive start =======*/
 
-/*==== Responsive at 1200 ====*/
-@media only screen and (max-width: 1200px) {
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .client_reviews {
+    .l_line {
+      display: block;
+    }
+  }
+  .review_about_us {
+    padding-top: 80px;
+  }
+  .name_experts {
+    font-size: 25px;
+    line-height: 20px;
+    padding: 10px 15px;
+    border-radius: 5px;
+  }
+  .experts_post {
+    font-size: 20px;
+    line-height: 24px;
+    padding: 3px 10px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+  }
 }
 /*==== Responsive at 768 ====*/
 @media only screen and (max-width: 768px) {

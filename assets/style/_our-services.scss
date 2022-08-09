@@ -88,6 +88,10 @@
       line-height: 36px;
       background-color: #fff;
       border-radius: 30px;
+      transition: 0.5s;
+      &:hover {
+        transform: scale(1.1);
+      }
     }
   }
 }
@@ -120,6 +124,12 @@
   }
 }
 @media only screen and (max-width: 991px) {
+  .our_service {
+    .l_line {
+      display: block;
+    }
+  }
+
   .client_wraper {
     img {
       width: 250px;
@@ -130,16 +140,11 @@
   }
   .sevice_main_heading {
     margin: 20px 0 60px;
+    text-align: center;
   }
 }
 
 @media only screen and (max-width: 768px) {
-  .our_service {
-    .l_line {
-      display: block;
-    }
-  }
-
   .client_wraper {
     img {
       width: 200px;
@@ -147,7 +152,6 @@
   }
   .sevice_main_heading {
     margin: 20px 0 35px;
-    text-align: center;
   }
   .service_card {
     padding: 30px 30px 50px;
