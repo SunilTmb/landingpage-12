@@ -1216,37 +1216,6 @@ li {
   margin: 20px auto 80px;
 }
 
-.our_expert-container {
-  position: relative;
-}
-.our_expert-container .swiper-button-next,
-.our_expert-container .swiper-button-prev {
-  padding: 21px;
-  border: 2px solid #f7d353;
-  color: rgb(136, 137, 138);
-  border-radius: 10px;
-  position: relative !important;
-  top: initial;
-  left: initial;
-}
-.our_expert-container .swiper-button-next:after,
-.our_expert-container .swiper-rtl .swiper-button-prev:after,
-.our_expert-container .swiper-button-prev:after,
-.our_expert-container .swiper-rtl .swiper-button-next:after {
-  font-size: 20px;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-  height: 100%;
-}
-.our_expert-container .swiper_btn {
-  gap: 30px;
-  position: absolute;
-  top: 45px;
-  right: 0;
-  flex-direction: row-reverse;
-}
-
 /*======= Our Expert Swiper =======*/
 .swiper {
   width: 100%;
@@ -1324,10 +1293,39 @@ li {
   backdrop-filter: blur(30px);
 }
 
-/*======= Review About Us Part=======*/
-.Our_expert .swiper,
-.Our_expert .swiper-wrapper {
+.our_expert-container {
+  position: relative;
+}
+.our_expert-container .swiper,
+.our_expert-container .swiper-wrapper {
   position: initial !important;
+}
+.our_expert-container .swiper-button-next,
+.our_expert-container .swiper-button-prev {
+  padding: 21px;
+  border: 2px solid #f7d353;
+  color: rgb(136, 137, 138);
+  border-radius: 10px;
+  position: relative !important;
+  top: initial;
+  left: initial;
+}
+.our_expert-container .swiper-button-next:after,
+.our_expert-container .swiper-rtl .swiper-button-prev:after,
+.our_expert-container .swiper-button-prev:after,
+.our_expert-container .swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.our_expert-container .swiper_btn {
+  gap: 30px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  flex-direction: row-reverse;
 }
 
 /*======= RESPONSIVE START =======*/
@@ -1361,6 +1359,135 @@ li {
   }
 }
 /*======= Client Review Section css End =======*/
+/*=======******************************======*/
+/*======= About Us Section =======*/
+/*======= About Us Section css start =======*/
+.about_us_sec {
+  background: linear-gradient(rgba(255, 128, 135, 0.05), rgba(59, 209, 191, 0.05), rgba(57, 28, 221, 0.05));
+}
+
+.review_about_us .l_line {
+  display: none;
+}
+
+.about_us_slide {
+  max-width: 780px !important;
+  border-radius: 28px;
+  flex-direction: column;
+  padding: 50px;
+  align-items: flex-start;
+}
+
+img.commaquote {
+  width: 40px;
+}
+
+.blockquote {
+  margin: 40px auto 30px;
+}
+.blockquote p {
+  font-size: 25px;
+  line-height: 36px;
+  text-align: left;
+}
+
+.figcaption {
+  gap: 20px;
+}
+.figcaption img {
+  width: 80px;
+}
+.figcaption span p:first-child {
+  font-weight: 700;
+  font-size: 25px;
+  line-height: 36px;
+}
+.figcaption span p:nth-child(2) {
+  font-size: 22px;
+  line-height: 28px;
+  margin-top: 4px;
+  text-align: left;
+}
+
+.about_us_container {
+  position: relative;
+}
+.about_us_container .swiper-slide,
+.about_us_container .swiper-wrapper {
+  position: initial !important;
+}
+.about_us_container .swiper-button-next,
+.about_us_container .swiper-button-prev {
+  padding: 21px;
+  border: 2px solid #f7d353;
+  color: rgb(136, 137, 138);
+  border-radius: 10px;
+  position: relative !important;
+  top: initial;
+  left: initial;
+}
+.about_us_container .swiper-button-next:after,
+.about_us_container .swiper-rtl .swiper-button-prev:after,
+.about_us_container .swiper-button-prev:after,
+.about_us_container .swiper-rtl .swiper-button-next:after {
+  font-size: 20px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  height: 100%;
+}
+.about_us_container .swiper_about_btn {
+  gap: 30px;
+  position: absolute;
+  top: 45px;
+  right: 0;
+  flex-direction: row-reverse;
+}
+
+/*======= RESPONSIVE START =======*/
+/*======= About us Section Responsive start =======*/
+/*==== Responsive at 991 ====*/
+@media only screen and (max-width: 991px) {
+  .review_about_us .l_line {
+    display: block;
+  }
+  .about_us_container .review_heading {
+    text-align: center;
+    margin: 10px auto 35px;
+  }
+  .about_us_slide {
+    padding: 25px;
+  }
+  .blockquote {
+    margin: 20px auto 20px;
+  }
+  .blockquote p {
+    font-size: 20px;
+    line-height: 30px;
+  }
+  .figcaption {
+    gap: 15px;
+  }
+  .figcaption img {
+    width: 60px;
+  }
+  .figcaption span p:first-child {
+    font-size: 22px;
+    line-height: 36px;
+  }
+  .figcaption span p:nth-child(2) {
+    font-size: 18px;
+    line-height: 18px;
+    margin-top: 0;
+  }
+}
+/*==== Responsive at 768 ====*/
+@media only screen and (max-width: 768px) {
+  .review_about_us {
+    padding-top: 60px;
+  }
+}
+/*======= About Us Section css End =======*/
 /*=======******************************======*/
 /*======= Our Blog Section =======*/
 /*======= Our Blog Section css start =======*/
